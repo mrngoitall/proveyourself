@@ -1,7 +1,7 @@
 <div class="well">
   <h2>Register</h2>
   <div class="signin form-horizontal">
-    <form name="registration" class="form-group" method="post" action="/register">
+    <form name="registration" ng-submit="register()" class="form-group" method="post">
       <label for="Email" class="col-sm-2 control-label">Email</label>
       <div class="col-sm-10">
         <input class="form-control" type="email" ng-model="email" name="email" required novalidate>
@@ -12,7 +12,7 @@
       </div>
       <div class="form-actions">
         <div class="col-sm-2">
-          <input class="btn btn-primary" ng-click="register()" type="submit" value="Sign Up">Sign up</button>
+          <input class="btn btn-primary" type="submit" value="Sign Up" />
         </div>
       </div>
     </form>
