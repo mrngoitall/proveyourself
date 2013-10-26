@@ -54,5 +54,22 @@
           <input type="radio" ng-model="a2" value="f">all of these
         </label>
       </div>
+
+      <label for="q3" class="control-label">To pass an array of strings to a function, you should not use...</label>
+      <div class="radio">
+        <label>
+          <input type="radio" ng-model="a3" value="a">fn.apply(this, stringsArray)
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" ng-model="a3" value="b">fn.call(this, stringsArray)
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" ng-model="a3" value="c">fn.bind(this, stringsArray)
+        </label>
+      </div>
   </form>
 </div>
