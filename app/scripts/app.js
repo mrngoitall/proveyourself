@@ -9,11 +9,15 @@ angular.module('DeskAngularJSApp', [
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'IndexCtrl'
+        controller: 'MainCtrl'
       })
       .when('/register', {
         templateUrl: 'views/register.html',
-        controller: 'IndexCtrl'
+        controller: 'MainCtrl'
+      })
+      .when('/quiz', {
+        templateUrl: 'views/quiz.html',
+        controller: 'MainCtrl'
       })
       .otherwise({
         redirectTo: '/'
