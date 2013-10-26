@@ -1,10 +1,13 @@
 'use strict';
 
 angular.module('DeskAngularJSApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+.controller('MainCtrl', ['$scope', '$location', function ($scope, $location) {
+
+  $scope.email = localStorage.email || '';
+
+  $scope.register = function() {
+    localStorage.email = $scope.email;
+    $location.path('/quiz');
+  };
+
+}]);
