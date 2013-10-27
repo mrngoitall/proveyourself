@@ -23,7 +23,7 @@
       </label>
     </div>
 
-    <label for="q2" class="control-label">2. To create a columned list of two­line email subjects and dates for a master­detail view, which are the most semantically correct?</label>
+    <label for="q2" class="control-label">2. To create a columned list of two­-line email subjects and dates for a master­-detail view, which are the most semantically correct?</label>
     <div class="radio">
       <label>
         <input type="radio" ng-model="a2" value="a">&lt;div&gt;+&lt;span&gt;
@@ -73,13 +73,15 @@
     </div>
 
     <div class="form-inline">
-      <label for="q4" class="control-label sr-only">4. Blank and blank would be the HTML tags you would use to display a menu item and its description.</label>
+      <label for="q4" class="control-label">4. </label>
       <div class="form-group">
-        4. <input type="text" class="form-control" ng-model="a4a">
-      </div> and <div class="form-group">
+        <input type="text" class="form-control" ng-model="a4a">
+      </div>
+      <label for="q4" class="control-label">and </label>
+      <div class="form-group">
         <input type="text" class="form-control" ng-model="a4b">
       </div>
-      would be the HTML tags you would use to display a menu item and its description.
+      <label for="q4" class="control-label">would be the HTML tags you would use to display a menu item and its description.</label>
     </div>
 
     <label for="q5" class="control-label">5. Given &lt;div id=&#x201d;outer&#x201d;&gt;&lt;div class=&#x201d;inner&#x201d;&gt;&lt;/div&gt;&lt;/div&gt;, which of these two is the most performant way to select the inner div?</label>
@@ -94,6 +96,37 @@
       </label>
     </div>
 
-
+    <label for="q6" class="control-label">6. Given this:</label>
+    <pre>
+angular.module(‘myModule’).service(‘myService’,function() {
+  var message = “Message one!”
+  var getMessage = function() {
+    return this.message
+  }
+  this.message = “Message two!”
+  this.getMessage = function() { return message }
+  function() {
+    {
+      getMessage: getMessage,
+      message: “Message three!”
+    }
+  }
+}
+    </pre>
+    <div class="radio">
+      <label>
+        <input type="radio" ng-model="a5" value="a">1
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" ng-model="a5" value="b">2
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" ng-model="a5" value="b">3
+      </label>
+    </div>
   </form>
 </div>
