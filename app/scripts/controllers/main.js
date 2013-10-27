@@ -10,4 +10,9 @@ angular.module('DeskAngularJSApp')
     $location.path('/quiz');
   };
 
+  $scope.logout = function() {
+    localStorage.removeItem('email');
+    $location.path('/');
+  };
+
 }]);
