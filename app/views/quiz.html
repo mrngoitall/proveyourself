@@ -1,7 +1,7 @@
 <div class="well">
   <h2>Take Quiz</h2>
   <form name="quiz" class="signin form-horizontal" role="form">
-    <label for="q1" class="control-label">Which is not an advantage of using a closure?</label>
+    <label for="q1" class="control-label">1. Which is not an advantage of using a closure?</label>
     <div class="radio">
       <label>
         <input type="radio" ng-model="a1" value="a">Prevent pollution of global scope
@@ -23,7 +23,7 @@
       </label>
     </div>
 
-    <label for="q2" class="control-label">To create a columned list of two­line email subjects and dates for a master­detail view, which are the most semantically correct?</label>
+    <label for="q2" class="control-label">2. To create a columned list of two­line email subjects and dates for a master­detail view, which are the most semantically correct?</label>
     <div class="radio">
       <label>
         <input type="radio" ng-model="a2" value="a">&lt;div&gt;+&lt;span&gt;
@@ -55,7 +55,7 @@
       </label>
     </div>
 
-    <label for="q3" class="control-label">To pass an array of strings to a function, you should not use...</label>
+    <label for="q3" class="control-label">3. To pass an array of strings to a function, you should not use...</label>
     <div class="radio">
       <label>
         <input type="radio" ng-model="a3" value="a">fn.apply(this, stringsArray)
@@ -71,5 +71,29 @@
         <input type="radio" ng-model="a3" value="c">fn.bind(this, stringsArray)
       </label>
     </div>
+
+    <div class="form-inline">
+      <label for="q4" class="control-label sr-only">4. Blank and blank would be the HTML tags you would use to display a menu item and its description.</label>
+      <div class="form-group">
+        4. <input type="text" class="form-control" ng-model="a4a">
+      </div> and <div class="form-group">
+        <input type="text" class="form-control" ng-model="a4b">
+      </div>
+      would be the HTML tags you would use to display a menu item and its description.
+    </div>
+
+    <label for="q5" class="control-label">5. Given &lt;div id=&#x201d;outer&#x201d;&gt;&lt;div class=&#x201d;inner&#x201d;&gt;&lt;/div&gt;&lt;/div&gt;, which of these two is the most performant way to select the inner div?</label>
+    <div class="radio">
+      <label>
+        <input type="radio" ng-model="a5" value="a">getElementById("outer").children[0]
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" ng-model="a5" value="b">getElementsByClassName("inner")[0]
+      </label>
+    </div>
+
+
   </form>
 </div>
