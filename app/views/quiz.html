@@ -1,6 +1,6 @@
 <div class="well">
   <h2>Take Quiz</h2>
-  <form name="quiz" class="signin form-horizontal" role="form">
+  <form name="quiz" class="signin form-horizontal" ng-submit="submitAnswers()" role="form">
     <label for="q1" class="control-label">1. Which is not an advantage of using a closure?</label>
     <div class="radio">
       <label>
@@ -127,6 +127,12 @@ angular.module(‘myModule’).service(‘myService’,function() {
       <label>
         <input type="radio" ng-model="a5" value="b">3
       </label>
+    </div>
+
+    <div class="form-actions">
+      <div class="col-sm-2">
+        <input class="btn btn-primary" type="submit" value="Submit Answers" />
+      </div>
     </div>
   </form>
 </div>
