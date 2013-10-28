@@ -4,7 +4,8 @@ angular.module('DeskAngularJSApp')
 .controller('MainCtrl', ['$scope', '$location', function ($scope, $location) {
 
   $scope.email = localStorage.email || '';
-  $scope.userAnswers = localStorage.userAnswers || {};
+  $scope.userAnswers = JSON.parse(localStorage.userAnswers) || {};
+  $scope.score = localStorage.score || -1;
 
   $scope.q1 = [
     {value: 'a',
@@ -17,6 +18,7 @@ angular.module('DeskAngularJSApp')
       answer: 'Allow conditional use of ‘strict mode’'}
   ];
 
+  // TODO: Determine real answers!
   $scope.answers = {
     a1: 'a',
     a2: 'b',
@@ -27,8 +29,6 @@ angular.module('DeskAngularJSApp')
     a6: 'b'
   };
 
-  $scope.score = 0;
-
   $scope.register = function() {
     localStorage.email = $scope.email;
     $location.path('/quiz');
@@ -36,14 +36,16 @@ angular.module('DeskAngularJSApp')
 
   $scope.submitAnswers = function() {
     console.log($scope.userAnswers);
-    if (localStorage.userAnswers === null) {
-      localStorage.userAnswers = $scope.userAnswers;
+    if (localStorage.userAnswers === null || 1 === 1) {
+      localStorage.userAnswers = JSON.stringify($scope.userAnswers);
       // Grade the answers
+      $scope.score = 0;
       for (var answer in $scope.answers) {
         if ($scope.userAnswers[answer] === $scope.answers[answer]) {
           $scope.score++;
         }
       }
+      localStorage.score = $scope.score;
       console.log($scope.score);
     }
   };
