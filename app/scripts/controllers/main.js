@@ -17,6 +17,18 @@ angular.module('DeskAngularJSApp')
       answer: 'Allow conditional use of ‘strict mode’'}
   ];
 
+  $scope.answers = {
+    a1: 'a',
+    a2: 'b',
+    a3: 'c',
+    a4a: 'answer1',
+    a4b: 'answer2',
+    a5: 'a',
+    a6: 'b'
+  };
+
+  $scope.score = 0;
+
   $scope.register = function() {
     localStorage.email = $scope.email;
     $location.path('/quiz');
@@ -26,6 +38,13 @@ angular.module('DeskAngularJSApp')
     console.log($scope.userAnswers);
     if (localStorage.userAnswers === null) {
       localStorage.userAnswers = $scope.userAnswers;
+      // Grade the answers
+      for (var answer in $scope.answers) {
+        if ($scope.userAnswers[answer] === $scope.answers[answer]) {
+          $scope.score++;
+        }
+      }
+      console.log($scope.score);
     }
   };
 
