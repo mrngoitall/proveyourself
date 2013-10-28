@@ -1,5 +1,20 @@
 <div class="well">
   <h2>Take Quiz</h2>
+  <div class="alert" ng-addClass="{
+    alert-success: score >= 5,
+    alert-warning: score >=3 && score < 5,
+    alert-danger: score < 3
+  }" ng-show="score > 0">
+    <span ng-show="score >= 5">
+      <strong>Congrats!</strong> You got {{ score }} out of 7!
+    </span>
+    <span ng-show="score >=3 && score < 5">
+      <strong>Nice!</strong> You got {{ score }} out of 7!
+    </span>
+    <span ng-show="score < 3">
+      <strong>Bummer.</strong> You only got {{ score }} out of 7. =\
+    <span>
+  </div>
   <form name="quiz" ng-submit="submitAnswers()" role="form">
     <div class="form-group">
       <label for="q1" class="control-label">1. Which is not an advantage of using a closure?</label>
