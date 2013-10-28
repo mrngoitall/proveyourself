@@ -4,6 +4,7 @@ angular.module('DeskAngularJSApp')
 .controller('MainCtrl', ['$scope', '$location', function ($scope, $location) {
 
   $scope.email = localStorage.email || '';
+  $scope.userAnswers = localStorage.userAnswers || {};
 
   $scope.q1 = [
     {value: 'a',
@@ -19,6 +20,13 @@ angular.module('DeskAngularJSApp')
   $scope.register = function() {
     localStorage.email = $scope.email;
     $location.path('/quiz');
+  };
+
+  $scope.submitAnswers = function() {
+    console.log($scope.userAnswers);
+    if (localStorage.userAnswers === null) {
+      localStorage.userAnswers = $scope.userAnswers;
+    }
   };
 
   $scope.logout = function() {
