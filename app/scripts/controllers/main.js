@@ -12,6 +12,7 @@ angular.module('DeskAngularJSApp')
 
   $scope.logout = function() {
     localStorage.removeItem('email');
+    $scope.email = '';
     $location.path('/');
   };
 
