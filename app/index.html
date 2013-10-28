@@ -29,7 +29,7 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default" role="navigation" ng-controller="MainCtrl">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header navbar-brand">
         Prove Yourself!
@@ -37,8 +37,8 @@
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav navbar-right" ng-controller="MainCtrl">
-          <li ng-show="email"><a href="#">Welcome {{ email }}</a></li>
+        <ul class="nav navbar-nav navbar-right">
+          <li ng-show="email.length"><a ng-click="logout()">Welcome {{ email }}</a></li>
         </ul>
       </div>
     </nav>
