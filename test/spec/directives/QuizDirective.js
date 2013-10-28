@@ -12,9 +12,9 @@ describe('Directive: QuizDirective', function () {
     scope = $rootScope.$new();
   }));
 
-  it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<-quiz-directive></-quiz-directive>');
+  it('should display a radio input with answer directive', inject(function ($compile) {
+    element = angular.element('<answer></answer>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the QuizDirective directive');
+    expect(element.html()).toContain('<input type="radio"');
   }));
 });
