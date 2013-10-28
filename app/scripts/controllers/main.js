@@ -5,6 +5,17 @@ angular.module('DeskAngularJSApp')
 
   $scope.email = localStorage.email || '';
 
+  $scope.q1 = [
+    {value: 'a',
+      answer: 'Prevent pollution of global scope'},
+    {value: 'b',
+      answer: 'Encapsulation'},
+    {value: 'c',
+      answer: 'Private properties and methods'},
+    {value: 'd',
+      answer: 'Allow conditional use of ‘strict mode’'}
+  ];
+
   $scope.register = function() {
     localStorage.email = $scope.email;
     $location.path('/quiz');

@@ -3,26 +3,7 @@
   <form name="quiz" ng-submit="submitAnswers()" role="form">
     <div class="form-group">
       <label for="q1" class="control-label">1. Which is not an advantage of using a closure?</label>
-      <div class="radio">
-        <label>
-          <input type="radio" ng-model="a1" value="a">Prevent pollution of global scope
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" ng-model="a1" value="b">Encapsulation
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" ng-model="a1" value="c">Private properties and methods
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" ng-model="a1" value="d">Allow conditional use of ‘strict mode’
-        </label>
-      </div>
+      <answer ng-repeat="options in q1" options="options" answermodel="a1"></answer>
     </div>
 
     <label for="q2" class="control-label">2. To create a columned list of two­-line email subjects and dates for a master­-detail view, which are the most semantically correct?</label>
