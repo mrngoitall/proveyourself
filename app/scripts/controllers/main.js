@@ -4,7 +4,7 @@ angular.module('DeskAngularJSApp')
 .controller('MainCtrl', ['$scope', '$location', function ($scope, $location) {
 
   $scope.email = localStorage.email || '';
-  $scope.userAnswers = JSON.parse(localStorage.userAnswers) || {};
+  $scope.userAnswers = (localStorage.userAnswers && JSON.parse(localStorage.userAnswers)) || {};
   $scope.score = localStorage.score || -1;
 
   $scope.q1 = [
@@ -41,7 +41,7 @@ angular.module('DeskAngularJSApp')
       // Grade the answers
       $scope.score = 0;
       for (var answer in $scope.answers) {
-        if ($scope.userAnswers[answer] === $scope.answers[answer]) {
+        if ($scope.userAnswers[answer].toLowerCase() === $scope.answers[answer]) {
           $scope.score++;
         }
       }
@@ -51,7 +51,7 @@ angular.module('DeskAngularJSApp')
   };
 
   $scope.logout = function() {
-    localStorage.removeItem('email');
+    localStorage.clear();
     $scope.email = '';
     $location.path('/');
   };
