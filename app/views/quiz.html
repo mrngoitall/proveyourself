@@ -3,55 +3,55 @@
   <form name="quiz" ng-submit="submitAnswers()" role="form">
     <div class="form-group">
       <label for="q1" class="control-label">1. Which is not an advantage of using a closure?</label>
-      <answer ng-repeat="options in q1" options="options" answermodel="a1"></answer>
+      <answer ng-repeat="options in q1" options="options" answermodel="userAnswers.a1"></answer>
     </div>
 
     <label for="q2" class="control-label">2. To create a columned list of two­-line email subjects and dates for a master­-detail view, which are the most semantically correct?</label>
     <div class="radio">
       <label>
-        <input type="radio" ng-model="a2" value="a">&lt;div&gt;+&lt;span&gt;
+        <input type="radio" ng-model="userAnswers.a2" value="a">&lt;div&gt;+&lt;span&gt;
       </label>
     </div>
     <div class="radio">
       <label>
-        <input type="radio" ng-model="a2" value="b">&lt;tr&gt;+&lt;td&gt;
+        <input type="radio" ng-model="userAnswers.a2" value="b">&lt;tr&gt;+&lt;td&gt;
       </label>
     </div>
     <div class="radio">
       <label>
-        <input type="radio" ng-model="a2" value="c">&lt;ul&gt;+&lt;li&gt;
+        <input type="radio" ng-model="userAnswers.a2" value="c">&lt;ul&gt;+&lt;li&gt;
       </label>
     </div>
     <div class="radio">
       <label>
-        <input type="radio" ng-model="a2" value="d">&lt;p&gt;+&lt;br&gt;
+        <input type="radio" ng-model="userAnswers.a2" value="d">&lt;p&gt;+&lt;br&gt;
       </label>
     </div>
     <div class="radio">
       <label>
-        <input type="radio" ng-model="a2" value="e">none of these
+        <input type="radio" ng-model="userAnswers.a2" value="e">none of these
       </label>
     </div>
     <div class="radio">
       <label>
-        <input type="radio" ng-model="a2" value="f">all of these
+        <input type="radio" ng-model="userAnswers.a2" value="f">all of these
       </label>
     </div>
 
     <label for="q3" class="control-label">3. To pass an array of strings to a function, you should not use...</label>
     <div class="radio">
       <label>
-        <input type="radio" ng-model="a3" value="a">fn.apply(this, stringsArray)
+        <input type="radio" ng-model="userAnswers.a3" value="a">fn.apply(this, stringsArray)
       </label>
     </div>
     <div class="radio">
       <label>
-        <input type="radio" ng-model="a3" value="b">fn.call(this, stringsArray)
+        <input type="radio" ng-model="userAnswers.a3" value="b">fn.call(this, stringsArray)
       </label>
     </div>
     <div class="radio">
       <label>
-        <input type="radio" ng-model="a3" value="c">fn.bind(this, stringsArray)
+        <input type="radio" ng-model="userAnswers.a3" value="c">fn.bind(this, stringsArray)
       </label>
     </div>
 
@@ -70,12 +70,12 @@
     <label for="q5" class="control-label">5. Given &lt;div id=&#x201d;outer&#x201d;&gt;&lt;div class=&#x201d;inner&#x201d;&gt;&lt;/div&gt;&lt;/div&gt;, which of these two is the most performant way to select the inner div?</label>
     <div class="radio">
       <label>
-        <input type="radio" ng-model="a5" value="a">getElementById("outer").children[0]
+        <input type="radio" ng-model="userAnswers.a5" value="a">getElementById("outer").children[0]
       </label>
     </div>
     <div class="radio">
       <label>
-        <input type="radio" ng-model="a5" value="b">getElementsByClassName("inner")[0]
+        <input type="radio" ng-model="userAnswers.a5" value="b">getElementsByClassName("inner")[0]
       </label>
     </div>
 
@@ -98,17 +98,17 @@ angular.module(‘myModule’).service(‘myService’,function() {
     </pre>
     <div class="radio">
       <label>
-        <input type="radio" ng-model="a5" value="a">1
+        <input type="radio" ng-model="userAnswers.a6" value="a">1
       </label>
     </div>
     <div class="radio">
       <label>
-        <input type="radio" ng-model="a5" value="b">2
+        <input type="radio" ng-model="userAnswers.a6" value="b">2
       </label>
     </div>
     <div class="radio">
       <label>
-        <input type="radio" ng-model="a5" value="b">3
+        <input type="radio" ng-model="userAnswers.a6" value="b">3
       </label>
     </div>
 
