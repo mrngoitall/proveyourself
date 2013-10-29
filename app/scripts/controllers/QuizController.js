@@ -22,6 +22,19 @@ angular.module('DeskAngularJSApp')
       answer: 'Allow conditional use of ‘strict mode’'}
   ];
 
+  $scope.q2 = [
+    {value: 'a',
+      answer: '&lt;div&gt;+&lt;span&gt;'},
+    {value: 'b',
+      answer: '&lt;tr&gt;+&lt;td&gt;'},
+    {value: 'c',
+      answer: '&lt;ul&gt;+&lt;li&gt;'},
+    {value: 'd',
+      answer: '&lt;p&gt;+&lt;br&gt;'},
+    {value: 'e',
+      answer: 'none of these'}
+  ];
+
   // TODO: Determine real answers!
   $scope.answers = {
     a1: 'd',
