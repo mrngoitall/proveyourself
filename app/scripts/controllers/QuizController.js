@@ -24,13 +24,13 @@ angular.module('DeskAngularJSApp')
 
   $scope.q2 = [
     {value: 'a',
-      answer: '&lt;div&gt;+&lt;span&gt;'},
+      answer: '<div>+<span>'},
     {value: 'b',
-      answer: '&lt;tr&gt;+&lt;td&gt;'},
+      answer: '<tr>+<td>'},
     {value: 'c',
-      answer: '&lt;ul&gt;+&lt;li&gt;'},
+      answer: '<ul>+<li>'},
     {value: 'd',
-      answer: '&lt;p&gt;+&lt;br&gt;'},
+      answer: '<p>+<br>'},
     {value: 'e',
       answer: 'none of these'},
     {value: 'f',
