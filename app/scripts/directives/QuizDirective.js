@@ -5,7 +5,6 @@ angular.module('DeskAngularJSApp')
     return {
       restrict: 'E',
       template: '<div class="radio" ng-class="{\
-        \'bs-callout\': score > -1 && (options.value == answers[model] || options.value == userAnswers[model]),\
         \'bs-callout-success\': score > -1 && options.value == answers[model],\
         \'bs-callout-danger\': score > -1 && options.value == userAnswers[model] && options.value != answers[model]\
       }">\
