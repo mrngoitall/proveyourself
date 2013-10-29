@@ -5,15 +5,17 @@ angular.module('DeskAngularJSApp')
     return {
       restrict: 'E',
       template: '<div class="radio" ng-class="{\
-        \'bs-callout\': score > -1 && (options.value == answers.a1 || options.value == userAnswers.a1),\
-        \'bs-callout-success\': score > -1 && options.value == answers.a1,\
-        \'bs-callout-danger\': score > -1 && options.value == userAnswers.a1 && options.value != answers.a1\
+        \'bs-callout\': score > -1 && (options.value == answers[model] || options.value == userAnswers[model]),\
+        \'bs-callout-success\': score > -1 && options.value == answers[model],\
+        \'bs-callout-danger\': score > -1 && options.value == userAnswers[model] && options.value != answers[model]\
       }">\
         <label>\
-          <input type="radio" class="control-label" ng-model="userAnswers.a1" name="a1" value="{{ options.value }}" ng-disabled="score > -1">{{ options.answer }}\
+          <input type="radio" class="control-label" ng-model="userAnswers[model]" name="{{model}}" value="{{ options.value }}" ng-disabled="score > -1">{{ options.answer }}\
         </label>\
       </div>',
       link: function postLink(scope, element, attrs) {
+        console.log(attrs);
+        scope.model = attrs.answermodel;
         //element.text('this is the QuizDirective directive');
       }
     };
