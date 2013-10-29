@@ -20,15 +20,8 @@ describe('Controller: QuizController', function () {
     expect(Object.keys(scope.answers).length).toBe(7);
   });
 
-  it('should have a register function', function() {
-    expect(scope.register).not.toThrow();
-  });
-
   it('should have a submitAnswers function', function() {
     expect(scope.submitAnswers).not.toThrow();
   });
 
-  it('should have a logout function', function() {
-    expect(scope.logout).not.toThrow();
-  });
 });

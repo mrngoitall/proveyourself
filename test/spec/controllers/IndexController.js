@@ -1,22 +1,26 @@
 'use strict';
 
-describe('Controller: IndexcontrollerCtrl', function () {
+describe('Controller: IndexController', function () {
 
   // load the controller's module
   beforeEach(module('DeskAngularJSApp'));
 
-  var IndexcontrollerCtrl,
+  var IndexController,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    IndexcontrollerCtrl = $controller('IndexcontrollerCtrl', {
+    IndexController = $controller('IndexController', {
       $scope: scope
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+  it('should have a register function', function() {
+    expect(scope.register).not.toThrow();
+  });
+
+  it('should have a logout function', function() {
+    expect(scope.logout).not.toThrow();
   });
 });
