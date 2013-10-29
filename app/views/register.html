@@ -2,13 +2,18 @@
   <h2>First off: Who are you?</h2>
   <div class="signin form-horizontal">
     <form name="registration" ng-submit="register()" class="form-group">
-      <label for="Email" class="col-sm-2 control-label">Email</label>
-      <div class="col-sm-10">
-        <input class="form-control" type="email" ng-model="email" name="email" required novalidate>
+      <div class="form-group">
+        <label for="Email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+          <input class="form-control" type="email" ng-model="email" name="email" required novalidate>
+        </div>
+        <div class="col-sm-10 col-sm-offset-2 form-error" ng-show="!registration.email.$valid && registration.email.$dirty">Please enter a valid email address</div>
       </div>
-      <label for="password" class="col-sm-2 control-label">Password</label>
-      <div class="col-sm-10">
-        <input class="form-control" type="password" name="password" required novalidate>
+      <div class="form-group">
+        <label for="password" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+          <input class="form-control" type="password" name="password" required novalidate>
+        </div>
       </div>
       <div class="form-actions">
         <div class="col-sm-2">
