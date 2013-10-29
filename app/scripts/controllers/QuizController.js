@@ -67,8 +67,8 @@ angular.module('DeskAngularJSApp')
     a1: 'd',
     a2: 'b',
     a3: 'a',
-    a4a: 'answer1',
-    a4b: 'answer2',
+    a4a: '<ul>',
+    a4b: '<li>',
     a5: 'b',
     a6: 'a'
   };
