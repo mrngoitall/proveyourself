@@ -3,7 +3,7 @@
   <form name="quiz" ng-submit="submitAnswers()" role="form">
     <div class="form-group">
       <label for="q1" class="control-label">1. Which is not an advantage of using a closure?</label>
-      <answer ng-repeat="options in q1" options="options" answermodel="userAnswers.a1"></answer>
+      <answer ng-repeat="options in q1" options="options" answermodel="a1"></answer>
     </div>
 
     <label for="q2" class="control-label">2. To create a columned list of two­-line email subjects and dates for a master­-detail view, which are the most semantically correct?</label>
@@ -60,13 +60,13 @@
       <div class="form-group inline-textbox" ng-class="{
         'has-error': userAnswers.a4a != answers.a4a && score > -1,
         'has-success': userAnswers.a4a == answers.a4a && score > -1}">
-        <input type="text" class="form-control" ng-model="userAnswers.a4a">
+        <input type="text" class="form-control" ng-model="userAnswers.a4a" ng-disabled="score > -1">
       </div>
       <label for="q4" class="control-label">and </label>
       <div class="form-group inline-textbox" ng-class="{
         'has-error': userAnswers.a4b != answers.a4b && score > -1,
         'has-success': userAnswers.a4b == answers.a4b && score > -1}">
-        <input type="text" class="form-control" ng-model="userAnswers.a4b">
+        <input type="text" class="form-control" ng-model="userAnswers.a4b" ng-disabled="score > -1">
       </div>
       <label for="q4" class="control-label">would be the HTML tags you would use to display a menu item and its description.</label>
     </div>
