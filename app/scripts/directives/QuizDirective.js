@@ -14,7 +14,6 @@ angular.module('DeskAngularJSApp')
         </label>\
       </div>',
       link: function postLink(scope, element, attrs) {
-        console.log(attrs);
         scope.model = attrs.answermodel;
         //element.text('this is the QuizDirective directive');
       }

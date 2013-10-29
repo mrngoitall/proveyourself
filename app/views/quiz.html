@@ -54,21 +54,9 @@ angular.module(‘myModule’).service(‘myService’,function() {
   }
 }
     </pre>
-    <label for="q6" class="control-label">Which message will be returned by injecting this service and executing “myService.getMessage()”?</label>
-    <div class="radio">
-      <label>
-        <input type="radio" ng-model="userAnswers.a6" value="a">1
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" ng-model="userAnswers.a6" value="b">2
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" ng-model="userAnswers.a6" value="c">3
-      </label>
+    <div class="form-group">
+      <label for="q6" class="control-label">Which message will be returned by injecting this service and executing “myService.getMessage()”?</label>
+      <answer ng-repeat="options in q6" options="options" answermodel="a6"></answer>
     </div>
 
     <div class="form-actions" ng-hide="score > 0">

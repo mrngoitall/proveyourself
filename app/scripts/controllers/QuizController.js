@@ -46,6 +46,22 @@ angular.module('DeskAngularJSApp')
       answer: 'fn.bind(this, stringsArray)'}
   ];
 
+  $scope.q5 = [
+    {value: 'a',
+      answer: 'getElementById("outer").children[0]'},
+    {value: 'b',
+      answer: 'getElementsByClassName("inner")[0]'}
+  ];
+
+  $scope.q6 = [
+    {value: 'a',
+      answer: '1'},
+    {value: 'b',
+      answer: '2'},
+    {value: 'c',
+      answer: '3'}
+  ];
+
   // TODO: Determine real answers!
   $scope.answers = {
     a1: 'd',
