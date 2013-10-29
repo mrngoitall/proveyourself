@@ -10,7 +10,7 @@ angular.module('DeskAngularJSApp')
   }
 
   $scope.register = function() {
-    if ($scope.registration.$valid) {
+    if ($scope.registration && $scope.registration.$valid) {
       localStorage.email = $scope.email;
       $location.path('/quiz');
     }
