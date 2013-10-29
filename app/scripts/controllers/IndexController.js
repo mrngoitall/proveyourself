@@ -5,9 +5,7 @@ angular.module('DeskAngularJSApp')
 
   $scope.email = localStorage.email || '';
 
-  if ($location.path() === '/quiz' && !$scope.email.length) {
-    $location.path('/');
-  } else if ($location.path() === '/register' && $scope.email.length) {
+  if ($location.path() === '/register' && $scope.email.length) {
     $location.path('/quiz');
   }
 

@@ -7,6 +7,10 @@ angular.module('DeskAngularJSApp')
   $scope.userAnswers = (localStorage.userAnswers && JSON.parse(localStorage.userAnswers)) || {};
   $scope.score = localStorage.score || -1;
 
+  if ($location.path() === '/quiz' && !$scope.email.length) {
+    $location.path('/');
+  }
+
   $scope.q1 = [
     {value: 'a',
       answer: 'Prevent pollution of global scope'},
