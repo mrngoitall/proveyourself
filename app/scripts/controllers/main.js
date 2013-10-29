@@ -37,7 +37,7 @@ angular.module('DeskAngularJSApp')
       $scope.score = 0;
       for (var answer in $scope.answers) {
         var userAnswer = $scope.userAnswers[answer];
-        if ((userAnswer && userAnswer.toLowerCase()) === $scope.answers[answer]) {
+        if ((userAnswer && userAnswer.trim().toLowerCase()) === $scope.answers[answer]) {
           $scope.score++;
         }
       }

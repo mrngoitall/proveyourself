@@ -74,19 +74,17 @@ angular.module('DeskAngularJSApp')
   };
 
   $scope.submitAnswers = function() {
-    console.log($scope.userAnswers);
     if (!localStorage.userAnswers) {
       localStorage.userAnswers = JSON.stringify($scope.userAnswers);
       // Grade the answers
       $scope.score = 0;
       for (var answer in $scope.answers) {
         var userAnswer = $scope.userAnswers[answer];
-        if ((userAnswer && userAnswer.toLowerCase()) === $scope.answers[answer]) {
+        if ((userAnswer && userAnswer.trim().toLowerCase()) === $scope.answers[answer]) {
           $scope.score++;
         }
       }
       localStorage.score = $scope.score;
-      console.log($scope.score);
     }
   };
 
