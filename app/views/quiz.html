@@ -10,23 +10,10 @@
       <label for="q2" class="control-label">2. To create a columned list of two­-line email subjects and dates for a master­-detail view, which are the most semantically correct?</label>
       <answer ng-repeat="options in q2" options="options" answermodel="a2"></answer>
     </div>
-    
 
-    <label for="q3" class="control-label">3. To pass an array of strings to a function, you should not use...</label>
-    <div class="radio">
-      <label>
-        <input type="radio" ng-model="userAnswers.a3" value="a">fn.apply(this, stringsArray)
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" ng-model="userAnswers.a3" value="b">fn.call(this, stringsArray)
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" ng-model="userAnswers.a3" value="c">fn.bind(this, stringsArray)
-      </label>
+    <div class="form-group">
+      <label for="q3" class="control-label">3. To pass an array of strings to a function, you should not use...</label>
+      <answer ng-repeat="options in q3" options="options" answermodel="a3"></answer>
     </div>
 
     <div class="form-inline">
@@ -45,16 +32,9 @@
       <label for="q4" class="control-label">would be the HTML tags you would use to display a menu item and its description.</label>
     </div>
 
-    <label for="q5" class="control-label">5. Given &lt;div id=&#x201d;outer&#x201d;&gt;&lt;div class=&#x201d;inner&#x201d;&gt;&lt;/div&gt;&lt;/div&gt;, which of these two is the most performant way to select the inner div?</label>
-    <div class="radio">
-      <label>
-        <input type="radio" ng-model="userAnswers.a5" value="a">getElementById("outer").children[0]
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" ng-model="userAnswers.a5" value="b">getElementsByClassName("inner")[0]
-      </label>
+    <div class="form-group">
+      <label for="q5" class="control-label">5. Given &lt;div id=&#x201d;outer&#x201d;&gt;&lt;div class=&#x201d;inner&#x201d;&gt;&lt;/div&gt;&lt;/div&gt;, which of these two is the most performant way to select the inner div?</label>
+      <answer ng-repeat="options in q5" options="options" answermodel="a5"></answer>
     </div>
 
     <label for="q6" class="control-label">6. Given this:</label>

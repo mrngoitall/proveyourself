@@ -32,7 +32,18 @@ angular.module('DeskAngularJSApp')
     {value: 'd',
       answer: '&lt;p&gt;+&lt;br&gt;'},
     {value: 'e',
-      answer: 'none of these'}
+      answer: 'none of these'},
+    {value: 'f',
+      answer: 'all of these'}
+  ];
+
+  $scope.q3 = [
+    {value: 'a',
+      answer: 'fn.apply(this, stringsArray)'},
+    {value: 'b',
+      answer: 'fn.call(this, stringsArray)'},
+    {value: 'c',
+      answer: 'fn.bind(this, stringsArray)'}
   ];
 
   // TODO: Determine real answers!
