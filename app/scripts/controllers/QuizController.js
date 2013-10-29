@@ -31,7 +31,7 @@ angular.module('DeskAngularJSApp')
 
   $scope.submitAnswers = function() {
     console.log($scope.userAnswers);
-    if (localStorage.userAnswers === null) {
+    if (!localStorage.userAnswers) {
       localStorage.userAnswers = JSON.stringify($scope.userAnswers);
       // Grade the answers
       $scope.score = 0;
@@ -44,6 +44,12 @@ angular.module('DeskAngularJSApp')
       localStorage.score = $scope.score;
       console.log($scope.score);
     }
+  };
+
+  $scope.logout = function() {
+    localStorage.clear();
+    $scope.email = '';
+    $location.path('/');
   };
 
 }]);
