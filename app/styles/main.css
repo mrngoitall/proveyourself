@@ -28,19 +28,13 @@ body {
     padding: 0 15px;
 }
 
-
-/* Common styles for all types */
-.bs-callout {
-/*  margin: 20px 0;
-  border-left: 5px solid #eee;*/
-}
 /* Variations */
 .bs-callout-danger {
-  background-color: #fcf2f2;
+  background-color: #FCC1C0;
   border-color: #dFb5b4;
 }
 .bs-callout-success {
-  background-color: #E2FED8;
+  background-color: #BEFEAA;
   border-color: #BFF1B9;
 }
 .bs-callout-info {
