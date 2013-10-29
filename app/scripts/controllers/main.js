@@ -36,12 +36,12 @@ angular.module('DeskAngularJSApp')
 
   $scope.submitAnswers = function() {
     console.log($scope.userAnswers);
-    if (localStorage.userAnswers === null || 1 === 1) {
+    if (localStorage.userAnswers === null) {
       localStorage.userAnswers = JSON.stringify($scope.userAnswers);
       // Grade the answers
       $scope.score = 0;
       for (var answer in $scope.answers) {
-        if ($scope.userAnswers[answer].toLowerCase() === $scope.answers[answer]) {
+        if (($scope.userAnswers[answer] && $scope.userAnswers[answer].toLowerCase()) === $scope.answers[answer]) {
           $scope.score++;
         }
       }
