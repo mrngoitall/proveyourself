@@ -16,20 +16,20 @@
       <answer ng-repeat="options in q3" options="options" answermodel="a3"></answer>
     </div>
 
-    <div class="form-inline">
+    <div class="form-inline inline-textbox">
       <label for="q4" class="control-label">4. </label>
-      <div class="form-group inline-textbox" ng-class="{
+      <div class="form-group" ng-class="{
         'has-error': userAnswers.a4a != answers.a4a && score > -1,
         'has-success': userAnswers.a4a == answers.a4a && score > -1}">
         <input type="text" class="form-control" ng-model="userAnswers.a4a" ng-disabled="score > -1">
       </div>
       <label for="q4" class="control-label">and </label>
-      <div class="form-group inline-textbox" ng-class="{
+      <div class="form-group" ng-class="{
         'has-error': userAnswers.a4b != answers.a4b && score > -1,
         'has-success': userAnswers.a4b == answers.a4b && score > -1}">
         <input type="text" class="form-control" ng-model="userAnswers.a4b" ng-disabled="score > -1">
       </div>
-      <label for="q4" class="control-label">would be the HTML tags you would use to display a menu item and its description.</label>
+      <label for="q4" class="control-label label-inline">would be the HTML tags you would use to display a menu item and its description.</label>
     </div>
 
     <div class="form-group">

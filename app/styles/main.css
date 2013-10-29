@@ -25,7 +25,15 @@ body {
 }
 
 .inline-textbox {
-  padding: 0 15px;
+  padding-bottom: 15px;
+}
+
+.label-inline {
+  display: inline;
+}
+
+.question-textbox-padding {
+  padding-bottom: 15px;
 }
 
 .form-error {
