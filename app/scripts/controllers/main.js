@@ -41,7 +41,8 @@ angular.module('DeskAngularJSApp')
       // Grade the answers
       $scope.score = 0;
       for (var answer in $scope.answers) {
-        if (($scope.userAnswers[answer] && $scope.userAnswers[answer].toLowerCase()) === $scope.answers[answer]) {
+        var userAnswer = $scope.userAnswers[answer];
+        if ((userAnswer && userAnswer.toLowerCase()) === $scope.answers[answer]) {
           $scope.score++;
         }
       }
