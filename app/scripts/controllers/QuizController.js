@@ -24,13 +24,13 @@ angular.module('DeskAngularJSApp')
 
   // TODO: Determine real answers!
   $scope.answers = {
-    a1: 'a',
+    a1: 'd',
     a2: 'b',
-    a3: 'c',
+    a3: 'a',
     a4a: 'answer1',
     a4b: 'answer2',
-    a5: 'a',
-    a6: 'b'
+    a5: 'b',
+    a6: 'a'
   };
 
   $scope.submitAnswers = function() {
