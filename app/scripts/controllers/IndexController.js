@@ -12,7 +12,9 @@ angular.module('DeskAngularJSApp')
   $scope.register = function() {
     if ($scope.registration && $scope.registration.$valid) {
       localStorage.email = $scope.email;
-      location.reload();
+      if ($scope.registration.$dirty) {
+        location.reload();
+      }
     }
   };
 
