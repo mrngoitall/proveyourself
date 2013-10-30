@@ -32,10 +32,6 @@ body {
   display: inline;
 }
 
-.question-textbox-padding {
-  padding-bottom: 15px;
-}
-
 .form-error {
   color: #b94a48
 }
