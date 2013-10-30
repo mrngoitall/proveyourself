@@ -14,6 +14,7 @@ describe('Controller: QuizController', function () {
     QuizController = $controller('QuizController', {
       $scope: scope
     });
+    localStorage.clear();
   }));
 
   it('should have an object of answers in the scope', function () {
