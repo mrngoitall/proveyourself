@@ -62,7 +62,6 @@ angular.module('DeskAngularJSApp')
       answer: '3'}
   ];
 
-  // TODO: Determine real answers!
   $scope.answers = {
     a1: 'd',
     a2: 'b',
@@ -86,12 +85,6 @@ angular.module('DeskAngularJSApp')
       }
       localStorage.score = $scope.score;
     }
-  };
-
-  $scope.logout = function() {
-    localStorage.clear();
-    $scope.email = '';
-    $location.path('/');
   };
 
 }]);
